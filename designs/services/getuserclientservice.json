@@ -1,0 +1,263 @@
+[
+    {
+        "id": "sd_rl8WrdMIlkOo9tx6",
+        "type": "tab",
+        "createdDate": "2022-09-29T06:58:35.324Z",
+        "label": "getuserclientservice",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "getuserclientservice",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_8jTsoKFR7x1IEzEl",
+        "type": "Start",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "recipes",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "sd_8jTsoKFR7x1IEzEl",
+        "category": "General",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "sd_mvmuXaICZbGE3yb2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "getuserclientservice"
+    },
+    {
+        "id": "sd_n4wyiuZkBGOc7mde",
+        "type": "HttpRequest",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.recipes",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "recipes"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_n4wyiuZkBGOc7mde",
+        "category": "HTTP",
+        "x": 425,
+        "y": 120,
+        "wires": [
+            [
+                "sd_udhsPV3u7z5WTxqo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "getuserclientservice",
+        "generated": true
+    },
+    {
+        "id": "sd_mvmuXaICZbGE3yb2",
+        "type": "Script",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url= bh.system.environment.properties.ssdURL + 'item'",
+        "functionName": "sd_mvmuXaICZbGE3yb2",
+        "category": "Function",
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "sd_n4wyiuZkBGOc7mde"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "getuserclientservice",
+        "generated": true
+    },
+    {
+        "id": "sd_udhsPV3u7z5WTxqo",
+        "type": "Script",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.recipes)",
+        "functionName": "sd_udhsPV3u7z5WTxqo",
+        "category": "Function",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "getuserclientservice",
+        "generated": true
+    },
+    {
+        "id": "sd_Cw7Xek2uCGLO2q30",
+        "type": "Start",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "image",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "sd_Cw7Xek2uCGLO2q30",
+        "category": "General",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "sd_jS3EpcsmMKRQSVTZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "getuserclientservice"
+    },
+    {
+        "id": "sd_jS3EpcsmMKRQSVTZ",
+        "type": "Script",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url= bh.system.environment.properties.ssdURL + 'images'",
+        "functionName": "sd_jS3EpcsmMKRQSVTZ",
+        "category": "Function",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "sd_dccpKrtZRO5bHzYr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "getuserclientservice",
+        "generated": true
+    },
+    {
+        "id": "sd_dccpKrtZRO5bHzYr",
+        "type": "HttpRequest",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.input.image",
+        "resultMappingObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "image"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_dccpKrtZRO5bHzYr",
+        "category": "HTTP",
+        "x": 425,
+        "y": 300,
+        "wires": [
+            [
+                "sd_rjiDGNG6D6EaJG6Q"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "getuserclientservice",
+        "generated": true
+    },
+    {
+        "id": "sd_rjiDGNG6D6EaJG6Q",
+        "type": "Script",
+        "z": "sd_rl8WrdMIlkOo9tx6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.image)",
+        "functionName": "sd_rjiDGNG6D6EaJG6Q",
+        "category": "Function",
+        "x": 625,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "getuserclientservice",
+        "generated": true
+    }
+]

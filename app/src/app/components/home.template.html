@@ -1,0 +1,13 @@
+<div fxLayout="row wrap" fxFlex="80" fxLayoutGap="10" fxLayoutAlign="space-around center" [fxShow]="true" fxFlexFill>
+  <mat-card *ngFor="let item of page.recipes">
+    <mat-card-title align="center">{{item.name}}</mat-card-title>
+
+    <img mat-card-image src="http://localhost:8081/api/images?uuid={{item.image}}" style="object-fit: contain; width: 300px; height: 200px;">
+
+    <mat-card-subtitle align="center">{{item.description}}</mat-card-subtitle>
+
+    <mat-card-content></mat-card-content>
+
+    <mat-card-actions></mat-card-actions>
+  </mat-card>
+</div>

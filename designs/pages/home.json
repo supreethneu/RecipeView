@@ -1,0 +1,131 @@
+[
+    {
+        "id": "sd_2V6UogHCKfBfao2n",
+        "type": "tab",
+        "createdDate": "2022-09-28T12:01:06.252Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_943b6NXm8nkv1Z8s",
+        "type": "OnInit",
+        "z": "sd_2V6UogHCKfBfao2n",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_943b6NXm8nkv1Z8s",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Dzl7CacCIdu9dllr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_Dzl7CacCIdu9dllr",
+        "type": "PageVariables",
+        "z": "sd_2V6UogHCKfBfao2n",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "recipes",
+                "typedIpValue": {
+                    "type": "bh.input",
+                    "value": "recipes"
+                }
+            }
+        ],
+        "functionName": "sd_Dzl7CacCIdu9dllr",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Zl9LRoxjvasYtgwz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Zl9LRoxjvasYtgwz",
+        "type": "PageCallService",
+        "z": "sd_2V6UogHCKfBfao2n",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_rl8WrdMIlkOo9tx6",
+            "type": "tab",
+            "createdDate": "2022-09-29T06:58:35.324Z",
+            "label": "getuserclientservice",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_8jTsoKFR7x1IEzEl",
+            "flowName": "sd_8jTsoKFR7x1IEzEl"
+        },
+        "inputVariables": [
+            {
+                "key": "recipes",
+                "map": true,
+                "valueType": "bh.input",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "recipes",
+                "valueType": "this.page",
+                "value": "recipes",
+                "mapVarName": "recipes",
+                "localVar": "this.page.recipes"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/getuserclientservice",
+        "startName": "sd_8jTsoKFR7x1IEzEl",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_Zl9LRoxjvasYtgwz",
+        "category": "General",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    }
+]

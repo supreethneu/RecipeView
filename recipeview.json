@@ -1,0 +1,13 @@
+{
+    "displayName": "RecipeView",
+    "appName": "recipeview",
+    "description": "View the Recipes",
+    "lastModified": "2022-09-28T11:51:32.475Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "classic",
+    "templateName": "blank",
+    "createDate": "2022-09-28T11:51:31.879Z",
+    "analyticsId": "16bf0995-e4dc-3220-3c04-a7f9297aace3",
+    "createdStudioVersion": "8.3.0"
+}
